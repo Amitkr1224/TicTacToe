@@ -1,0 +1,126 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@200;300;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+}
+body{
+    /* background-color: white; */
+    background: linear-gradient(to right, #e8cbc0, #636fa4);
+}
+.box{
+    background-color: black;
+    color: white;
+}
+.heading{
+    text-align: center;
+    margin: 30px;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.gameturn{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* color: white; */
+    font-family: 'Righteous', cursive;
+}
+.info{
+    color: crimson;
+}
+.gameC{
+    display: flex;
+    justify-content: center;
+    /* background-color: bisque; */
+}
+.container{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 7vw);
+    grid-template-rows: repeat(3, 7vw);
+    cursor: pointer;
+}
+
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3){
+    border-top: none;
+}
+
+.box:last-child,
+.box:nth-child(7),
+.box:nth-child(8){
+    border-bottom: none;
+}
+
+.box:nth-child(3n + 1){
+    border-left: none;
+}
+.box:nth-child(3n + 3){
+    border-right: none;
+}
+/* .box:hover{
+    background-color: rgb(240, 231, 219);
+} */
+.container div{
+    font-family: 'Itim', sans-serif;
+    border: 1px solid whitesmoke;
+    font-size: 3rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameInfo{
+    /* margin: 110px ; */
+    padding: 0 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reset{
+    margin-left: 60px;
+    padding: 5px 15px;
+    background-color:transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    /* outline: none; */
+    
+    cursor: pointer;
+}
+#reset:hover{
+    background-color: black;
+    transition: 0.8s ease;
+    color: white;
+    /* border: 1px solid crimson; */
+}
+.imgbox img{
+    margin: 50px;
+    width: 0;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 800px) {
+    .gameC{
+        flex-wrap: wrap;
+    }
+
+    .container div{
+        font-size: 1.3rem;
+    }
+    .heading{
+        font-size: 1rem;
+    }
+    /* .gameInfo{
+        display: block;
+    } */
+    #reset{
+        margin-left: 100px;
+    }
+}
